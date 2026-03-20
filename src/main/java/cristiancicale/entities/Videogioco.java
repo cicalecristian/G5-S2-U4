@@ -1,6 +1,6 @@
 package cristiancicale.entities;
 
-public class Videogioco extends Collezione {
+public class Videogioco extends Gioco {
 
     private Piattaforma piattaforma;
     private int durataInOre;
@@ -17,12 +17,37 @@ public class Videogioco extends Collezione {
         return piattaforma;
     }
 
+    public void setPiattaforma(Piattaforma piattaforma) {
+        this.piattaforma = piattaforma;
+    }
+
     public int getDurata() {
         return durataInOre;
     }
 
     public Genere getGenere() {
         return genere;
+    }
+
+    public void setGenere(Genere genere) {
+        this.genere = genere;
+    }
+
+    public void setDurataInOre(int durataInOre) {
+        this.durataInOre = durataInOre;
+    }
+
+    @Override
+    public String toString() {
+        return "Videogioco{" +
+                "ID: " + getId() +
+                ", Titolo: '" + getTitolo() + '\'' +
+                ", AnnoPubblicazione: " + getAnnoPubblicazione() +
+                ", Prezzo: " + getPrezzo() + '€' +
+                ", Piattaforma: " + piattaforma +
+                ", Durata: " + durataInOre +
+                ", Genere: " + genere +
+                '}';
     }
 }
 

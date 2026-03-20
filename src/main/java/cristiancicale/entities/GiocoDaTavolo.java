@@ -1,6 +1,6 @@
 package cristiancicale.entities;
 
-public class GiocoDaTavolo extends Collezione {
+public class GiocoDaTavolo extends Gioco {
 
     private int numeroGiocatori;
     private int durataInMin;
@@ -25,5 +25,21 @@ public class GiocoDaTavolo extends Collezione {
 
     public int getDurataInMin() {
         return durataInMin;
+    }
+
+    public void setDurataInMin(int durataInMin) {
+        this.durataInMin = durataInMin;
+    }
+
+    @Override
+    public String toString() {
+        return "GiocoDaTavolo{" +
+                "ID: " + getId() +
+                ", Titolo: '" + getTitolo() + '\'' +
+                ", AnnoPubblicazione: " + getAnnoPubblicazione() +
+                ", Prezzo: " + getPrezzo() + '€' +
+                ", NumeroGiocatori: " + numeroGiocatori +
+                ", DurataInMin: " + durataInMin +
+                '}';
     }
 }
